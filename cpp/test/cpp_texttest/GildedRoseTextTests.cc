@@ -1,9 +1,9 @@
 #include <iostream>
 #include "GildedRose.h"
 
-void print_item(Item& item)
+void print_item(Item &item)
 {
-    std::cout << item.name << ", " <<  item.sellIn << ", " << item.quality << '\n';
+    std::cout << item.name << ", " << item.sellIn << ", " << item.quality << '\n';
 }
 
 int main()
@@ -30,7 +30,7 @@ int main()
     {
         std::cout << "-------- day " << day << " --------" << '\n';
         std::cout << "name, sellIn, quality" << '\n';
-        for (auto& item : items)
+        for (auto &item : items)
         {
             print_item(item);
         }

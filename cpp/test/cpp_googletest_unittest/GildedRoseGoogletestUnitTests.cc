@@ -1,7 +1,8 @@
 #include <gtest/gtest.h>
 #include "GildedRose.h"
 
-TEST(GildedRoseTest, Foo) {
+TEST(GildedRoseTest, Foo)
+{
     std::vector<Item> items;
     items.push_back(Item("Foo", 0, 0));
     GildedRose app(items);

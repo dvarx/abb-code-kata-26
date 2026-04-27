@@ -2,10 +2,11 @@
 
 using namespace std;
 
-GildedRose::GildedRose(vector<Item> & items) : items(items)
-{}
-    
-void GildedRose::updateQuality() 
+GildedRose::GildedRose(vector<Item> &items) : items(items)
+{
+}
+
+void GildedRose::updateQuality()
 {
     for (int i = 0; i < items.size(); i++)
     {
