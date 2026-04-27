@@ -61,21 +61,3 @@ For example, run the CMake configuration `cmake -DBUILD_APPROVAL_TESTS_WITH_CATC
 ### Run a specific test with verbose output
 
     $ ctest -VV --tests-regex Catch2Approval
-
-## How to build and run tests using the [CLion IDE](https://www.jetbrains.com/clion/)
-
-1. Start CLion
-2. Select menu `File - Open...`
-3. Select folder `${GIT_FOLDER}/GildedRose-Refactoring-Kata/cpp`
-4. Select menu `Build - Build Project`
-5. Select menu `Run - Run...`
-6. Select what test variant to run, e.g. `GildedRoseCatch2ApprovalTests`.
-
-## How to build and run tests using Visual Studio &GreaterEqual; 2019 
-
-1. Start Visual Studio
-2. Select `Open a local folder`
-3. Select folder `${GIT_FOLDER}/GildedRose-Refactoring-Kata/cpp`
-4. Wait for message `CMake generation finished.` in the CMake output window at the bottom
-5. Select what test variant to run in the drop down menu for Startup Items, e.g. `GildedRoseCatch2ApprovalTests.exe`.
-6. Select menu `Debug - Start`
