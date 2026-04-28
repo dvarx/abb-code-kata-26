@@ -20,7 +20,7 @@ TEST(GildedRoseApprovalTests, VerifyCombinationsRegular)
     int const minint = std::numeric_limits<int>::min();
     std::vector<std::string> names{"Foo", aged_brie, backstage_pass, sulfuras};
     std::vector<int> sellIns{minint, -15, -10, -5, -1, 0, 1, 5, 10, 15, maxint};
-    std::vector<int> qualities{0, 1, 5, 80, 50, 150, maxint};
+    std::vector<int> qualities{0, 1, 5, 50, 80, 150, maxint};
 
     auto f = [](std::string name, int sellIn, int quality)
     {
