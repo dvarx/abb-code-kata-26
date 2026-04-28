@@ -8,11 +8,11 @@ GildedRose::GildedRose(vector<Item> &items) : items(items)
 
 void GildedRose::updateQualityItem(Item &item) const
 {
-    if (item.name != "Aged Brie" && item.name != "Backstage passes to a TAFKAL80ETC concert")
+    if (item.name != aged_brie && item.name != backstage_pass)
     {
         if (item.quality > 0)
         {
-            if (item.name != "Sulfuras, Hand of Ragnaros")
+            if (item.name != sulfuras)
             {
                 item.quality = item.quality - 1;
             }
@@ -24,7 +24,7 @@ void GildedRose::updateQualityItem(Item &item) const
         {
             item.quality = item.quality + 1;
 
-            if (item.name == "Backstage passes to a TAFKAL80ETC concert")
+            if (item.name == backstage_pass)
             {
                 if (item.sellIn < 11)
                 {
@@ -45,20 +45,20 @@ void GildedRose::updateQualityItem(Item &item) const
         }
     }
 
-    if (item.name != "Sulfuras, Hand of Ragnaros")
+    if (item.name != sulfuras)
     {
         item.sellIn = item.sellIn - 1;
     }
 
     if (item.sellIn < 0)
     {
-        if (item.name != "Aged Brie")
+        if (item.name != aged_brie)
         {
-            if (item.name != "Backstage passes to a TAFKAL80ETC concert")
+            if (item.name != backstage_pass)
             {
                 if (item.quality > 0)
                 {
-                    if (item.name != "Sulfuras, Hand of Ragnaros")
+                    if (item.name != sulfuras)
                     {
                         item.quality = item.quality - 1;
                     }
