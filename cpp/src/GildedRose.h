@@ -12,6 +12,20 @@ public:
     Item(std::string name, int sellIn, int quality) : name(name), sellIn(sellIn), quality(quality)
     {
     }
+    void increment_quality()
+    {
+        if (quality < 50)
+        {
+            quality++;
+        }
+    }
+    void decrement_quality()
+    {
+        if (quality > 0)
+        {
+            quality--;
+        }
+    }
 };
 
 class GildedRose

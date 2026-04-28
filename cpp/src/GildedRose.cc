@@ -16,36 +16,24 @@ void GildedRose::updateQualityItem(Item &item) const
     // update the quality of the item
     if (item.name == aged_brie || item.name == backstage_pass)
     {
-        if (item.quality < 50)
+        item.increment_quality();
+
+        if (item.name == backstage_pass)
         {
-            item.quality = item.quality + 1;
-
-            if (item.name == backstage_pass)
+            if (item.sellIn < 11)
             {
-                if (item.sellIn < 11)
-                {
-                    if (item.quality < 50)
-                    {
-                        item.quality = item.quality + 1;
-                    }
-                }
+                item.increment_quality();
+            }
 
-                if (item.sellIn < 6)
-                {
-                    if (item.quality < 50)
-                    {
-                        item.quality = item.quality + 1;
-                    }
-                }
+            if (item.sellIn < 6)
+            {
+                item.increment_quality();
             }
         }
     }
     else
     {
-        if (item.quality > 0)
-        {
-            item.quality = item.quality - 1;
-        }
+        item.decrement_quality();
     }
 
     // update the sellIn of the item
@@ -55,10 +43,7 @@ void GildedRose::updateQualityItem(Item &item) const
     {
         if (item.name == aged_brie)
         {
-            if (item.quality < 50)
-            {
-                item.quality = item.quality + 1;
-            }
+            item.increment_quality();
         }
         else if (item.name == backstage_pass)
         {
@@ -66,10 +51,7 @@ void GildedRose::updateQualityItem(Item &item) const
         }
         else
         {
-            if (item.quality > 0)
-            {
-                item.quality = item.quality - 1;
-            }
+            item.decrement_quality();
         }
     }
 }
