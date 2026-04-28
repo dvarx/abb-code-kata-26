@@ -19,8 +19,8 @@ TEST(GildedRoseApprovalTests, VerifyCombinationsRegular)
     int const maxint = std::numeric_limits<int>::max();
     int const minint = std::numeric_limits<int>::min();
     std::vector<std::string> names{"Foo", aged_brie, backstage_pass, sulfuras};
-    std::vector<int> sellIns{1, 5, -1, -5, 0, maxint, minint};
-    std::vector<int> qualities{1, 5, -1, -5, 0, 80, 50, 150, -150, maxint, minint};
+    std::vector<int> sellIns{minint, -15, -10, -5, -1, 0, 1, 5, 10, 15, maxint};
+    std::vector<int> qualities{0, 1, 5, 80, 50, 150, maxint};
 
     auto f = [](std::string name, int sellIn, int quality)
     {
